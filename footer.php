@@ -1,14 +1,9 @@
-	<div class="clear"></div>	
-	
-	<div id="footer">
-	
+
+	<footer class="l-site-footer">
+		<div class="l-site-wrapper-inner">
 		
-		
-		
-		<div class="footer_text">  </div>
-	
-	</div><!--//footer-->
-</div><!--//main_container-->
+		</div>		
+	</footer>
 <?php wp_footer(); ?>
 </body>
 </html>
