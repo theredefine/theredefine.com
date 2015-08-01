@@ -12,7 +12,9 @@ Tags: 3 column theme, clean, portfolio, blogger
 @import 'vars',
         'normalize-plus',
         '_wp-core.scss',
+        'layout',
         'global',
+        'modules/menu',
         'modules/header',
         'modules/loop-thumbnail'
         ;

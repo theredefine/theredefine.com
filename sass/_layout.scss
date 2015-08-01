@@ -1,0 +1,20 @@
+.l-site-wrapper-inner {
+	overflow: auto;
+
+	@media screen and (min-width: $large) {
+		margin: 0 auto;
+		width: $large;
+	}
+}
+
+.l-site-header {
+	margin: 0 auto;
+	position: relative;
+}
+
+.l-site-footer {
+	background-color: $color-secondary;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}

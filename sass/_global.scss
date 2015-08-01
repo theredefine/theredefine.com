@@ -8,7 +8,7 @@ h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dd,
 p,figure,
 pre,table,fieldset,hr,
-.loop-thumbnail-wrapper{
+.apply-vertical-rhythm {
     margin-bottom:1.5rem;
 }
 
@@ -41,6 +41,40 @@ img {
 p {
     line-height: 27px;
 }
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #888
+}
+
+
+// text treatments
+h1 {
+
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+.color-highlight {
+    color: $color-highlight;
+}
+
+
+// utility classes
 
 .left {
     float: left;
@@ -54,44 +88,3 @@ p {
     clear: both;
 }
 
-.desktop_clear {
-    clear: both;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #888
-}
-
-#main_container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1px 30px 1px 30px;
-    background-color: #FFFFFF;
-    max-width: 1024px;
-}
-
-::selection {
-    background: #c9dee3;
-}
-
-::-moz-selection {
-    background: #c9dee3;
-}
-
-
-/* HTML5 tags */
-
-header,
-section,
-footer,
-aside,
-nav,
-article,
-figure {
-    display: block;
-}

@@ -1,9 +1,40 @@
 .loop-thumbnail {
 
-	&-wrapper {
+	&-item {
 		display: block;
 		float: left;
+		position: relative;
 		width: 100%;
+	
+		@media screen and (min-width: $small) {
+			margin-right: 2%;
+			width: 49%;
+
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (min-width: $medium) {
+			margin-right: 1.5rem;
+			width: 31.7%;
+
+			&:nth-child(even) {
+				margin-right: 1.5rem;
+			}
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+		}
+
+		@media screen and (min-width: $large) {
+			height: 600px;
+		}
 	}
 
 	&-image {
@@ -12,9 +43,26 @@
 	}
 
 	&-meta {
-		background-color: $color-background;
+		background-color: rgba($color-primary, .1);
+		padding: 1.5rem;
 		position: relative;
 		text-align: center;
+
+		@media screen and (min-width: $medium) {
+			background-color: rgba($color-primary, .8);
+			color: $color-background;
+			height: 100%;
+			opacity: 0;
+			padding-top: 50%;
+			position: absolute;
+			top: 0;
+			transition: opacity 250ms;
+			width: 100%;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 
 }
