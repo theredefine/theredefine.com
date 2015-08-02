@@ -1,13 +1,13 @@
 $(document).ready(function() {
-	$('#content_inside').infinitescroll({
+	$('main.l-main .loop-thumbnail-wrapper').infinitescroll({
 	 
-	    navSelector  : "div.load_more_text",            
+	    navSelector  : "div.load_more_cont",            
 	                   // selector for the paged navigation (it will be hidden)
-	    nextSelector : "div.load_more_text a:first",    
+	    nextSelector : "div.load_more_cont a:first",    
 	                   // selector for the NEXT link (to page 2)
-	    itemSelector : "#content_inside .loop-thumbnail-wrapper"
+	    itemSelector : "main.l-main .loop-thumbnail-item"
 	                   // selector for all items you'll retrieve
-	  },function(arrayOfNewElems){
+	  }, function(arrayOfNewElems){
 	  
 	  
 	     // optional callback when new content is successfully loaded in.

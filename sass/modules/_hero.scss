@@ -1,0 +1,19 @@
+.hero {
+
+	&-wrapper {
+		margin-bottom: 3rem;
+		max-height: 700px;
+		overflow: hidden;
+		position: relative;
+	
+		h2 {
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
+	&-image {
+		width: 100%;
+	}
+
+}
