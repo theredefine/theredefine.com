@@ -1,0 +1,18 @@
+.social-banner {
+
+	&-wrapper {
+		background-color: rgba($color-primary, .8);
+		display: none;
+		overflow: auto;
+		padding: 0;
+		width: 100%;
+
+		@media screen and (min-width: $medium) {
+			display: block;		
+		}
+	}
+	
+	&-link-wrapper {
+		float: right;
+	}
+}

@@ -23,7 +23,15 @@
 <body>
 <?php $shortname = "neue"; ?>
 
-		<header role="banner" class="l-site-header">
+		<header role="banner" class="l-site-header header-wrapper">
+			<div class="social-banner-wrapper">
+				<div class="l-site-wrapper-inner">
+					<div class="social-banner-link-wrapper">
+					    <? get_template_part( 'partials/header-links' ); ?>  
+				    </div>
+				</div>
+			</div>
+
 			<div class="l-site-wrapper-inner">
 			
 				<div class="header_menu">
@@ -32,34 +40,22 @@
 				        <div></div>
 				        <div></div>
 					</div>
-					<div class="menu-item-wrapper">
-						<div class="head_social">
-							<?php if(get_option($shortname.'_twitter_link','') != "") { ?>
-								<a href="<?php echo get_option($shortname.'_twitter_link',''); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter-icon.png" /></a>
-							<?php } ?>
-							<?php if(get_option($shortname.'_facebook_link','') != "") { ?>
-								<a href="<?php echo get_option($shortname.'_facebook_link',''); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook-icon.png" /></a>
-							<?php } ?>
-							<?php if(get_option($shortname.'_google_plus_link','') != "") { ?>
-								<a href="<?php echo get_option($shortname.'_google_plus_link',''); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/google-plus-icon.png" /></a>
-							<?php } ?>
-							<?php if(get_option($shortname.'_dribbble_link','') != "") { ?>
-								<a href="<?php echo get_option($shortname.'_dribbble_link',''); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/dribbble-icon.png" /></a>
-							<?php } ?>
-							<?php if(get_option($shortname.'_pinterest_link','') != "") { ?>
-								<a href="<?php echo get_option($shortname.'_pinterest_link',''); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/pinterest-icon.png" /></a>
-							<?php } ?>
-							<div class="clear"></div>
-						</div><!--//head_social-->
-						<?php wp_nav_menu('menu=header_menu&container=false&menu_id='); ?>
-					</div>
-				</div><!--//header_menu-->
 
+					<!-- logo -->
 				<?php if(get_option($shortname.'_custom_logo_url','') != "") { ?>
 				  <a href="<?php bloginfo('url'); ?>"><img src="<?php echo stripslashes(stripslashes(get_option($shortname.'_custom_logo_url',''))); ?>" class="header-logo" /></a>
 				<?php } else { ?>
 				  <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.jpg" class="header-logo" /></a>
 				<?php } ?> 
+
+					<div class="menu-item-wrapper">
+						<div class="menu-social-links">
+						    <? get_template_part( 'partials/header-links' ); ?>  
+						</div>
+						<?php wp_nav_menu('menu=header_menu&container=false&menu_id='); ?>
+					</div>
+				</div><!--//header_menu-->
+
 
 			</div>
 		

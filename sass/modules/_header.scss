@@ -1,107 +1,22 @@
 /* Header */
 
-#header {
-    padding: 20px 0 10px 0;
-}
+.header {
+     &-wrapper {
+        background-color: $color-background;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: $z-modal;
 
-#header .left {
-    width: 350px;
-}
+        @media screen and (min-width: $medium) {
+            background-color: rgba($color-primary, .8);
+            color: $color-background;
+        }
+     }
 
-#header .left img {
-    max-width: 350px;
-    height: inherit;
-}
-
-#header .right {
-    width: 600px;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.logo {
-    float: left;
-}
-
-.head_social {
-    float: right;
-    margin-bottom: 10px;
-}
-
-.head_social img {
-    float: left;
-    margin-left: 10px;
-}
-
-.header_menu {
-    max-width: 720px;
-    float: right;
-    margin-top: 15px;
-}
-
-.header_menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header_menu ul li {
-    float: left;
-    margin-left: 10px;
-    font-size: 15px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.header_menu ul li a {
-    color: #999;
-    text-decoration: none;
-    padding: 4px 15px;
-    display: block;
-}
-
-.header_menu ul li.current-menu-item a,
-.header_menu ul li.current_page_item a,
-.header_menu ul li a:hover {
-    background-color: #fff;
-    color: #db9380;
-}
-
-.header_menu ul li ul {
-    position: absolute;
-    top: 24px;
-    left: 0;
-    border: 1px solid #dfdfdf;
-    background-color: #fff;
-    padding: 5px 5px;
-    display: none;
-    z-index: 25;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.header_menu ul li ul li {
-    width: 140px;
-    font-size: 13px;
-    margin: 0;
-    padding: 3px 0;
-    border-top: 1px solid #efefef;
-}
-
-.header_menu ul li ul li:first-child {
-    border-top: none;
-}
-
-.header_menu ul li ul li.current-menu-item a,
-.header_menu ul li ul li.current_page_item a,
-.header_menu ul li ul li a {
-    color: #b2b2b6;
-    background: none;
-}
-
-.header_menu ul li ul li.current-menu-item a:hover,
-.header_menu ul li ul li.current_page_item a:hover,
-.header_menu ul li ul li a:hover {
-    background: none;
-    color: #000;
+    &-logo {
+        float: left;
+        height: 70px;
+        margin-left: 60px;
+    }
 }

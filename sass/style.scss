@@ -16,7 +16,12 @@ Tags: 3 column theme, clean, portfolio, blogger
         'global',
         'modules/menu',
         'modules/header',
+        'modules/hero',
+        'modules/social-banner',
         'modules/loop-thumbnail'
         ;
 
 
+#wpadminbar {
+    display: none;
+}

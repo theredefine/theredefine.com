@@ -1,0 +1,143 @@
+.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	&-burger {
+		background-color: $color-background;
+		height: 45px;
+		left: 0;
+		padding: 5px;
+		position: absolute;
+		width: 45px;
+
+		.menu-open & {
+			box-shadow: 8px 5px 15px rgba($color-primary, 0.28);
+			z-index: $z-modal + 1;
+		}
+
+		div {
+			background-color: $color-primary;
+			height: 6px;
+			margin-bottom: 5px;
+			width: 35px;
+		}
+
+		@media screen and (min-width: $medium) {
+			display: none;	
+		}
+	}
+
+	&-social-links {
+		@media screen and (min-width: $medium) {
+			display: none;	
+		}
+	}
+
+	&-item-wrapper {
+		height: 100vh;
+		left: -240px;
+		position: absolute;
+		top: 0;
+		width: 240px;
+		z-index: $z-modal;
+	
+		.menu-open & {
+			background-color: $color-background;
+			box-shadow: 8px 5px 15px rgba($color-primary, .28);
+		}
+
+		@media screen and (min-width: $medium) {
+			height: auto;
+			left: 0;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	&-item {
+		border-bottom: 1px solid;
+		text-transform: uppercase;
+		position: relative;
+		width: 100%;
+
+		@media screen and (min-width: $medium) {
+			border-bottom: 0;
+			float: left;
+			width: auto;
+		}
+
+		a {
+			display: inline-block;
+			padding: 1rem;
+			width: 100%;
+
+			@media screen and (min-width: $medium) {
+				border-bottom: 0;
+				color: $color-background;
+				float: left;
+				width: auto;
+			}
+		}
+
+		&.no-hover:after {
+			content: ' ';
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid black;
+			top: 25px;
+			right: 13px;
+
+			@media screen and (min-width: $medium) {
+				border: 0;
+			}
+		}
+	}
+
+}
+
+.sub-menu {
+	display: none;
+	list-style-type: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	position: absolute;
+	top: 2rem;
+
+	.menu-item.is-active & {
+		border-top: 1px solid;
+		display: block;
+		position: relative;
+		top: 0;
+
+		@media screen and (min-width: $medium) {
+			border-top: 0;
+			display: none;
+			position: inherit;
+		}
+
+	}
+
+	@media screen and (min-width: $medium) {
+		margin-bottom: inherit;
+		.menu-item:hover & {
+			display: block;
+		}
+	}
+
+	.menu-item {
+		padding-left: 1rem;
+			
+		@media screen and (min-width: $medium) {
+			background-color: rgba($color-primary, .8);
+			clear: left;
+			float: left;
+			width: 100%;
+		}
+	}
+
+
+}

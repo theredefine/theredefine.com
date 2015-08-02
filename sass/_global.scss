@@ -20,9 +20,19 @@ div {
 
 body {
     font-size: 16px;
-    color: #333;
+    color: $color-primary;
     line-height: 17px;
-    background: #FFFFFF;
+    background: $color-background;
+    transition: transform 500ms;
+
+    &.menu-open {
+        left: 240px;
+        position: relative;
+
+        @media screen and (min-width: $medium) {
+            left: 0;
+        }
+    }
 }
 
 h1,
@@ -47,13 +57,22 @@ a {
 }
 
 a:hover {
-    color: #888
+    color: $color-highlight;
 }
 
 
 // text treatments
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+}
 
+
+h1 {
+    
 }
 
 h2 {

@@ -19,4 +19,12 @@ $(document).ready(function() {
 	  });  
 
 
+	$('.menu-burger').click(function() {
+		$('body').toggleClass('menu-open');
+	});
+
+	$('.menu-item.no-hover').click(function(event) {
+		$(this).toggleClass('is-active');
+	});
+
 });

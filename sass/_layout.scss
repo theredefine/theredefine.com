@@ -1,5 +1,5 @@
 .l-site-wrapper-inner {
-	overflow: auto;
+	overflow: visible;
 
 	@media screen and (min-width: $large) {
 		margin: 0 auto;
@@ -13,7 +13,7 @@
 }
 
 .l-site-footer {
-	background-color: $color-secondary;
+	background-color: rgba($color-primary, .8);
 	bottom: 0;
 	position: fixed;
 	width: 100%;
