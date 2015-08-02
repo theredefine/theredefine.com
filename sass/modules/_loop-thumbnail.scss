@@ -4,6 +4,7 @@
 		display: block;
 		float: left;
 		position: relative;
+		text-transform: uppercase;
 		width: 100%;
 	
 		@media screen and (min-width: $small) {
@@ -53,7 +54,7 @@
 			color: $color-background;
 			height: 100%;
 			opacity: 0;
-			padding-top: 50%;
+			padding-top: 54%;
 			position: absolute;
 			top: 0;
 			transition: opacity 250ms;
@@ -62,6 +63,21 @@
 			&:hover {
 				opacity: 1;
 			}
+		}
+
+		.meta-category {
+			font-size: 1.3rem;
+			font-weight: 700;
+			margin-bottom: 2.2rem;
+		}
+
+		h2 {
+			line-height: 2.1rem;
+			margin-bottom: 1.8rem;
+		}
+
+		.meta-tagline {
+			margin-bottom: 1.2rem;
 		}
 	}
 
